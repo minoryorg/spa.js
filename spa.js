@@ -4,7 +4,7 @@ $(function ($) {
     'use strict';
     if (window.history && window.history.pushState) {
         // click link with pushState
-        $(document).on('click', 'a:not([href^="#"], [class*="ignore"])', function(e) {
+        $(document).on('click', 'a:not([href^="#"], [target="_blank"], [class*="ignore"])', function(e) {
             e.preventDefault();
             var url = $(this).attr('href');
             var title = $(this).attr('title');
