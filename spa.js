@@ -1,4 +1,4 @@
-var content_id = ".content";
+var content_id = '.content';
 
 $(function ($) {
     'use strict';
@@ -13,7 +13,7 @@ $(function ($) {
         });
         
         // form submit with pushState
-        $(document).on('submit', 'form:not([action^="#"], [class*="ignore"])', function(e){
+        $(document).on('submit', 'form:not([action^="#"], [class*="ignore"])', function(e) {
             e.preventDefault();
             var url = $(this).attr('action');
             var title = $(this).attr('title');
@@ -33,7 +33,7 @@ $(function ($) {
         
         // send post
         function postAction(url) {
-            $.post(url, $("form").serialize(), function(data){
+            $.post(url, $("form").serialize(), function(data) {
                 loadContent(data);
             })
             .fail(function() {
@@ -55,7 +55,7 @@ $(function ($) {
         }
         
         // history back with popState
-        $(window).on('popstate', function(e){
+        $(window).on('popstate', function(e) {
             getAction(location.pathname);
         });
     }
