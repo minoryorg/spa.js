@@ -2,7 +2,7 @@ var content_id = ".content";
 
 $(function ($) {
     'use strict';
-    if (window.history &amp;&amp; window.history.pushState) {
+    if (window.history && window.history.pushState) {
         // click link with pushState
         $(document).on('click', 'a:not([href^="#"], [class*="ignore"])', function(e) {
             e.preventDefault();
@@ -51,7 +51,7 @@ $(function ($) {
         
         // error
         function loadError() {
-            location.href='/error' // or $(content_id).html('&lt;h1&gt;Error!&lt;/h1&gt;');
+            location.href='/error' // or $(content_id).html('<h1>Error!</h1>');
         }
         
         // history back with popState
